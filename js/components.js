@@ -3,6 +3,8 @@ class SnakePart {
   constructor(x, y) {
     this.x = x;
     this.y = y;
+    this.width = tileSize;
+    this.height = tileSize;
   }
 }
 
@@ -21,27 +23,27 @@ class text_comp {
 
 class apple {
   constructor() {
-    this.x = 5;
-    this.y = 5;
+    this.x = getRandomInt(21, 670);
+    this.y = getRandomInt(21, 370);
     this.update = function () {
       myGameArea.context.fillStyle = "red";
       myGameArea.context.fillRect(this.x, this.y, tileSize, tileSize);
     };
-    this.hit = (otherobj) => {
-      let myleft = this.centerX;
-      let myright = this.centerX + this.hitBoxWidth;
-      let mytop = this.centerY;
-      let mybottom = this.centerY + this.hitBoxHeight;
-      let otherleft = otherobj.x;
-      let otherright = otherobj.x + otherobj.width;
-      let othertop = otherobj.y;
-      let otherbottom = otherobj.y + otherobj.height;
-      let crash = true;
+    this.hit = () => {
+      var myleft = this.x;
+      var myright = this.x + tileSize;
+      var mytop = this.y;
+      var mybottom = this.y + tileSize;
+      var otherleft = headX * tileCount;
+      var otherright = headX * tileCount + tileSize;
+      var othertop = headY * tileCount;
+      var otherbottom = headY * tileCount + tileSize;
+      var crash = true;
       if (
-        mybottom <= othertop ||
-        mytop >= otherbottom ||
-        myright <= otherleft ||
-        myleft >= otherright
+        mybottom < othertop ||
+        mytop > otherbottom ||
+        myright < otherleft ||
+        myleft > otherright
       ) {
         crash = false;
       }

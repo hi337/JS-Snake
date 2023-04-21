@@ -5,7 +5,7 @@ let tileSize = 700 / tileCount - 2;
 
 let headX = 10;
 let headY = 10;
-const snakeParts = [];
+let snakeParts = [];
 let tailLength = 2;
 
 let inputsXVelocity = 0;
@@ -15,8 +15,6 @@ let xVelocity = 0;
 let yVelocity = 0;
 
 let score = 0;
-
-const gulpSound = new Audio("gulp.mp3");
 
 let gameOver = false;
 

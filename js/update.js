@@ -39,21 +39,18 @@ function updateGame() {
     }
   }
 
-  //check to see if game should be stopped
-  if (gameOver) {
-    gameOverText.text = "Game Over!";
-    gameOverText.update();
-    myGameArea.stop();
-    shakeScreen();
-    return;
-  }
-
   //checks collision with the apple
   if (Apple.hit()) {
-    Apple.x = Math.floor(Math.random() * tileCount);
-    Apple.y = Math.floor(Math.random() * tileCount);
+    Apple.x = getRandomInt(21, 670);
+    Apple.y = getRandomInt(21, 370);
     tailLength++;
     score++;
+  }
+
+  //check to see if game should be stopped
+  if (gameOver) {
+    myGameArea.stop(); //shakes the screen and shows game over text
+    return; // stops the game loop
   }
 
   Apple.update();

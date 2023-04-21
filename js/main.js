@@ -50,6 +50,10 @@ let myGameArea = {
     this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
   },
   stop: function () {
+    localStorage.setItem("top_score", top_score);
+    gameOverText.text = "Game Over!";
+    gameOverText.update();
+    shakeScreen();
     window.addEventListener("keydown", function (e) {
       if (e.key == "r") {
         location.reload();
