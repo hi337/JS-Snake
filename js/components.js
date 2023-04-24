@@ -51,3 +51,34 @@ class apple {
     };
   }
 }
+
+function border_comp(width, height, x, y) {
+  this.width = width;
+  this.height = height;
+  this.x = x;
+  this.y = y;
+  this.update = function () {
+    myGameArea.context.fillStyle = "red";
+    myGameArea.context.fillRect(this.x, this.y, this.width, this.height);
+  };
+  this.hit = () => {
+    var myleft = this.x;
+    var myright = this.x + this.width;
+    var mytop = this.y;
+    var mybottom = this.y + this.height;
+    var otherleft = headX * tileCount;
+    var otherright = headX * tileCount + tileSize;
+    var othertop = headY * tileCount;
+    var otherbottom = headY * tileCount + tileSize;
+    var crash = true;
+    if (
+      mybottom < othertop ||
+      mytop > otherbottom ||
+      myright < otherleft ||
+      myleft > otherright
+    ) {
+      crash = false;
+    }
+    return crash;
+  };
+}

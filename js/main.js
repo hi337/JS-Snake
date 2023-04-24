@@ -1,9 +1,14 @@
 //initialization of the game area and components
 function startGame() {
-  gameOverText = new text_comp("30px", "Consolas", "white", 290, 200);
+  gameOverText = new text_comp("40px", "Consolas", "white", 250, 200);
   Apple = new apple();
   myScore = new text_comp("12px", "Consolas", "white", 200, 40);
   topScore = new text_comp("12px", "Consolas", "white", 310, 40);
+  pausedText = new text_comp("40px", "Consolas", "white", 290, 200);
+  borderTop = new border_comp(700, 10, 0, 0);
+  borderBottom = new border_comp(700, 10, 0, 390);
+  borderLeft = new border_comp(10, 393, 0, 10);
+  borderRight = new border_comp(10, 393, 690, 10);
   myGameArea.start();
 }
 

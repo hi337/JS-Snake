@@ -1,12 +1,12 @@
 let speed = 7;
 
 let tileCount = 20;
-let tileSize = 700 / tileCount - 2;
+let tileSize = 350 / tileCount - 2;
 
 let headX = 10;
 let headY = 10;
 let snakeParts = [];
-let tailLength = 2;
+let tailLength = 0;
 
 let inputsXVelocity = 0;
 let inputsYVelocity = 0;
@@ -26,3 +26,7 @@ let top_score = +window.localStorage.getItem("top_score") || 0;
 
 let paused = false;
 let allow_pause = true;
+let pausedText;
+let borderTop, borderBottom, borderRight, borderLeft;
+
+let scoreIncrement = 5;
