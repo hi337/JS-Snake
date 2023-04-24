@@ -2,8 +2,8 @@
 function startGame() {
   gameOverText = new text_comp("40px", "Consolas", "white", 250, 200);
   Apple = new apple();
-  myScore = new text_comp("12px", "Consolas", "white", 200, 40);
-  topScore = new text_comp("12px", "Consolas", "white", 310, 40);
+  myScore = new text_comp("15px", "Consolas", "white", 200, 40);
+  topScore = new text_comp("15px", "Consolas", "white", 360, 40);
   pausedText = new text_comp("40px", "Consolas", "white", 290, 200);
   borderTop = new border_comp(700, 10, 0, 0);
   borderBottom = new border_comp(700, 10, 0, 390);

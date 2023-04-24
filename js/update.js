@@ -99,7 +99,7 @@ function updateGame() {
 
     //changing top_score for efficient instant adjustment
     if (score > top_score) {
-      top_score++;
+      top_score = score;
     }
     topScore.text = `TOP SCORE: ${top_score}`;
     topScore.update();
