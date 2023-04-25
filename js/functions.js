@@ -13,7 +13,7 @@ function getRandomInt(min, max) {
 }
 
 //handles a touch start event
-function tapHandler(event) {
+function tapedTwice(event) {
   if (!tapedTwice) {
     tapedTwice = true;
     setTimeout(function () {
