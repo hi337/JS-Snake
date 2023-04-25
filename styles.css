@@ -18,8 +18,8 @@ body {
 
 canvas {
   border: 2px black solid;
-  height: 90%;
-  width: 90%;
+  height: 99%;
+  width: 99%;
 }
 
 .shakeScreen {
