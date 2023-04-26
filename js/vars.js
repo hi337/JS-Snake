@@ -24,3 +24,7 @@ let allow_full = true;
 let full = false;
 let tapedTwice = false;
 let topScore;
+let touchTheshold = 50;
+let initialX = null;
+let initialY = null;
+let scrolledDirection = "none";

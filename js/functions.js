@@ -14,6 +14,8 @@ function getRandomInt(min, max) {
 
 //handles a touch start event
 function tapStartHandler(event) {
+  initialX = event.touches[0].clientX;
+  initialY = event.touches[0].clientY;
   if (!tapedTwice) {
     tapedTwice = true;
     setTimeout(function () {
@@ -56,4 +58,47 @@ function resizeHandler(event) {
   borderRight.x = innerWidth - 10;
   Apple.x = getRandomInt(21, innerWidth - 21);
   Apple.y = getRandomInt(21, innerHeight - 21);
+}
+
+function tapMoveHandler(event) {
+  if (initialX === null) {
+    return;
+  }
+
+  if (initialY === null) {
+    return;
+  }
+
+  var currentX = e.touches[0].clientX;
+  var currentY = e.touches[0].clientY;
+
+  var diffX = initialX - currentX;
+  var diffY = initialY - currentY;
+
+  if (Math.abs(diffX) > Math.abs(diffY)) {
+    // sliding horizontally
+    if (diffX > 0) {
+      // swiped left
+      scrolledDirection = "left";
+    } else {
+      // swiped right
+      scrolledDirection = "right";
+    }
+  } else {
+    // sliding vertically
+    if (diffY > 0) {
+      // swiped up
+      scrolledDirection = "up";
+    } else {
+      // swiped down
+      scrolledDirection = "down";
+    }
+  }
+  e.preventDefault();
+}
+
+function tapEndHandler(event) {
+  initialX = null;
+  initialY = null;
+  scrolledDirection = "none";
 }

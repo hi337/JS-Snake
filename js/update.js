@@ -115,25 +115,37 @@ function updateGame() {
     }
 
     //move the snake
-    if (myGameArea.keys && myGameArea.keys["w"]) {
+    if (
+      (myGameArea.keys && myGameArea.keys["w"]) ||
+      scrolledDirection == "up"
+    ) {
       if (inputsYVelocity != 1) {
         inputsYVelocity = -1;
         inputsXVelocity = 0;
       }
     }
-    if (myGameArea.keys && myGameArea.keys["s"]) {
+    if (
+      (myGameArea.keys && myGameArea.keys["s"]) ||
+      scrolledDirection == "down"
+    ) {
       if (inputsYVelocity != -1) {
         inputsYVelocity = 1;
         inputsXVelocity = 0;
       }
     }
-    if (myGameArea.keys && myGameArea.keys["a"]) {
+    if (
+      (myGameArea.keys && myGameArea.keys["a"]) ||
+      scrolledDirection == "left"
+    ) {
       if (inputsXVelocity != 1) {
         inputsYVelocity = 0;
         inputsXVelocity = -1;
       }
     }
-    if (myGameArea.keys && myGameArea.keys["d"]) {
+    if (
+      (myGameArea.keys && myGameArea.keys["d"]) ||
+      scrolledDirection == "right"
+    ) {
       if (inputsXVelocity != -1) {
         inputsYVelocity = 0;
         inputsXVelocity = 1;
