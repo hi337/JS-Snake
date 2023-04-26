@@ -1,5 +1,6 @@
 function shakeScreen() {
   myGameArea.canvas.classList.add("shakeScreen");
+  navigator.vibrate(500)
   setTimeout(() => {
     myGameArea.canvas.classList.remove("shakeScreen");
   }, 500);
