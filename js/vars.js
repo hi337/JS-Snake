@@ -23,3 +23,4 @@ let scoreIncrement = 5;
 let allow_full = true;
 let full = false;
 let tapedTwice = false;
+let topScore;

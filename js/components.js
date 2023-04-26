@@ -13,8 +13,9 @@ class text_comp {
   constructor(size, font, color, x, y) {
     this.x = x;
     this.y = y;
+    this.size = size;
     this.update = function () {
-      myGameArea.context.font = size + " " + font;
+      myGameArea.context.font = this.size + " " + font;
       myGameArea.context.fillStyle = color;
       myGameArea.context.fillText(this.text, this.x, this.y);
     };

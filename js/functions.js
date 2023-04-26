@@ -34,6 +34,26 @@ function tapStartHandler(event) {
   }
 }
 
-// function resizeHandler() {
-
-// }
+//update the canvas layout given resizing due to full screen or rotating mobile device
+function resizeHandler(event) {
+  myGameArea.canvas.width = window.innerWidth;
+  myGameArea.canvas.height = window.innerHeight;
+  gameOverText.size = `${0.05714285714 * innerWidth}px`;
+  gameOverText.x = innerWidth / 2.6;
+  gameOverText.y = innerHeight / 2;
+  myScore.size = `${0.02142857142 * innerWidth}px`;
+  myScore.x = innerWidth / 3.5;
+  topScore.size = `${0.02142857142 * innerWidth}px`;
+  topScore.x = innerWidth / 1.75;
+  pausedText.size = `${0.05714285714 * innerWidth}px`;
+  pausedText.x = innerWidth / 2.3;
+  pausedText.y = innerHeight / 2;
+  borderTop.width = innerWidth;
+  borderBottom.width = innerWidth;
+  borderBottom.y = innerHeight - 10;
+  borderLeft.height = innerHeight;
+  borderRight.height = innerHeight;
+  borderRight.x = innerWidth - 10;
+  Apple.x = getRandomInt(21, innerWidth - 21);
+  Apple.y = getRandomInt(21, innerHeight - 21);
+}
