@@ -22,3 +22,4 @@ let borderTop, borderBottom, borderRight, borderLeft;
 let scoreIncrement = 5;
 let allow_full = true;
 let full = false;
+let tapedTwice = false;
