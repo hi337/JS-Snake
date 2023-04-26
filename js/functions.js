@@ -69,8 +69,8 @@ function tapMoveHandler(event) {
     return;
   }
 
-  var currentX = e.touches[0].clientX;
-  var currentY = e.touches[0].clientY;
+  var currentX = event.touches[0].clientX;
+  var currentY = event.touches[0].clientY;
 
   var diffX = initialX - currentX;
   var diffY = initialY - currentY;
@@ -94,7 +94,7 @@ function tapMoveHandler(event) {
       scrolledDirection = "down";
     }
   }
-  e.preventDefault();
+  event.preventDefault();
 }
 
 function tapEndHandler(event) {
