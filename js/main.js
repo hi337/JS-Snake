@@ -49,7 +49,7 @@ let myGameArea = {
     //detect resizing and change the locations of things given new size
     // this.canvas.addEventListener("resize", resizeHandler);
     //detect doubletap and cause full screen
-    this.canvas.addEventListener("touchstart", tapedTwice); //detects a double tap on screen for full
+    this.canvas.addEventListener("touchstart", tapStartHandler); //detects a double tap on screen for full
     window.addEventListener("keydown", function (e) {
       if (allow_pause) {
         if (e.key == "p") {
