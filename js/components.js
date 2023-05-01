@@ -24,8 +24,8 @@ class text_comp {
 
 class apple {
   constructor() {
-    this.x = getRandomInt(21, innerWidth - 21);
-    this.y = getRandomInt(21, innerHeight - 21);
+    this.x = getRandomInt(30, innerWidth - 30);
+    this.y = getRandomInt(30, innerHeight - 30);
     this.update = function () {
       myGameArea.context.fillStyle = "red";
       myGameArea.context.fillRect(this.x, this.y, tileSize, tileSize);

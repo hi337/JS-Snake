@@ -55,8 +55,8 @@ function updateGame() {
 
     //checks collision with the apple
     if (Apple.hit()) {
-      Apple.x = getRandomInt(21, innerWidth - 21);
-      Apple.y = getRandomInt(21, innerHeight - 21);
+      Apple.x = getRandomInt(30, innerWidth - 30);
+      Apple.y = getRandomInt(30, innerHeight - 30);
       tailLength++;
       score++;
     }

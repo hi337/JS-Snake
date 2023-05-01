@@ -47,8 +47,6 @@ let myGameArea = {
     document.body.insertBefore(this.canvas, document.body.childNodes[10]);
     updateGame();
     //detect resizing and change the locations of things given new size
-    // this.canvas.addEventListener("resize", resizeHandler);
-    //detect doubletap and cause full screen
     window.addEventListener("resize", resizeHandler);
     this.canvas.addEventListener("touchstart", tapStartHandler, false);
     this.canvas.addEventListener("touchmove", tapMoveHandler, false);
